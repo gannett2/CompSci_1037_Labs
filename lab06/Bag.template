@@ -1,0 +1,69 @@
+// An implementation of templated class "Bag"
+
+#include <stdlib.h> // for rand()
+#include "cs1037assert.h"  // Our alternative to #include <cassert>  
+
+template <class Item>
+Bag<Item> :: Bag(unsigned int max_capacity) {
+    m_max_capacity = max_capacity;
+    m_size = 0;
+    m_container = new Item [m_max_capacity];
+}
+
+template <class Item>
+Bag<Item> :: ~Bag( ) {
+    delete [ ] m_container;
+}
+
+template <class Item>
+void Bag<Item> :: add(Item value) {
+    // PRECONDITION: the bag must not be "full"
+    // Assert(!isFull(),"Bag is full (in add)");
+	if(isFull())
+		replaceContainer();
+    m_container[m_size] = value; // store the pointer 
+    m_size++;
+}
+
+template <class Item>
+Item Bag<Item> :: getOne( ) {
+    // PRECONDITION: the bag must not be empty when "getOne()" is called
+    Assert(!isEmpty(),"Bag is empty (in getOne)");
+    //generate a random number between 0 and (m_size-1);
+    unsigned int index = (unsigned int)( rand( ) % m_size);  
+    Item value = m_container[index];  
+    m_container[index] = m_container[m_size-1]; 
+    m_size--;
+    return value;                                 
+}
+
+template <class Item>
+bool Bag<Item> :: isEmpty( ) const {
+    return (m_size == 0);
+}
+
+template <class Item>
+bool Bag<Item> :: isFull( ) const {
+    return (m_size == m_max_capacity);
+}
+
+template <class Item>
+unsigned int Bag<Item> :: currentSize( ) const {
+    return m_size;
+}
+
+template <class Item>
+unsigned int Bag<Item> :: capacity( ) const {
+    return m_max_capacity;
+}
+
+template <class Item>
+void Bag<Item> :: replaceContainer( ) {
+    Item * newBag;
+    newBag = new Item[2 * m_max_capacity];
+    for (unsigned int k = 0; k < m_size; k++ ) 
+		newBag[k] = m_container[k];
+    m_max_capacity = 2 * m_max_capacity;
+    delete [ ] m_container;
+    m_container = newBag;
+}

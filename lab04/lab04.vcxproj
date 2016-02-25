@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{56806F3C-8D6B-40A7-AF65-BF51D8942A77}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>lab04</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Card.cpp" />
+    <ClCompile Include="cs1037lib.cpp" />
+    <ClCompile Include="ImageCard.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="Rect.cpp" />
+    <ClCompile Include="VisualCard.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Card.h" />
+    <ClInclude Include="cs1037assert.h" />
+    <ClInclude Include="cs1037lib-image.h" />
+    <ClInclude Include="cs1037lib-window.h" />
+    <ClInclude Include="Cstr.h" />
+    <ClInclude Include="DynArray.h" />
+    <ClInclude Include="DynArrayImpl.h" />
+    <ClInclude Include="ImageCard.h" />
+    <ClInclude Include="Point.h" />
+    <ClInclude Include="Rect.h" />
+    <ClInclude Include="VisualCard.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cards_bmp\b1fv.bmp" />
+    <None Include="cards_bmp\b2fv.bmp" />
+    <None Include="cards_bmp\C2.bmp" />
+    <None Include="cards_bmp\C3.bmp" />
+    <None Include="cards_bmp\C4.bmp" />
+    <None Include="cards_bmp\C5.bmp" />
+    <None Include="cards_bmp\C6.bmp" />
+    <None Include="cards_bmp\C7.bmp" />
+    <None Include="cards_bmp\C8.bmp" />
+    <None Include="cards_bmp\C9.bmp" />
+    <None Include="cards_bmp\Ca.bmp" />
+    <None Include="cards_bmp\Cj.bmp" />
+    <None Include="cards_bmp\Ck.bmp" />
+    <None Include="cards_bmp\Cq.bmp" />
+    <None Include="cards_bmp\Ct.bmp" />
+    <None Include="cards_bmp\D2.bmp" />
+    <None Include="cards_bmp\D3.bmp" />
+    <None Include="cards_bmp\D4.bmp" />
+    <None Include="cards_bmp\D5.bmp" />
+    <None Include="cards_bmp\D6.bmp" />
+    <None Include="cards_bmp\D7.bmp" />
+    <None Include="cards_bmp\D8.bmp" />
+    <None Include="cards_bmp\D9.bmp" />
+    <None Include="cards_bmp\Da.bmp" />
+    <None Include="cards_bmp\Dj.bmp" />
+    <None Include="cards_bmp\Dk.bmp" />
+    <None Include="cards_bmp\Dq.bmp" />
+    <None Include="cards_bmp\Dt.bmp" />
+    <None Include="cards_bmp\H2.bmp" />
+    <None Include="cards_bmp\H3.bmp" />
+    <None Include="cards_bmp\H4.bmp" />
+    <None Include="cards_bmp\H5.bmp" />
+    <None Include="cards_bmp\H6.bmp" />
+    <None Include="cards_bmp\H7.bmp" />
+    <None Include="cards_bmp\H8.bmp" />
+    <None Include="cards_bmp\H9.bmp" />
+    <None Include="cards_bmp\Ha.bmp" />
+    <None Include="cards_bmp\Hj.bmp" />
+    <None Include="cards_bmp\Hk.bmp" />
+    <None Include="cards_bmp\Hq.bmp" />
+    <None Include="cards_bmp\Ht.bmp" />
+    <None Include="cards_bmp\S2.bmp" />
+    <None Include="cards_bmp\S3.bmp" />
+    <None Include="cards_bmp\S4.bmp" />
+    <None Include="cards_bmp\S5.bmp" />
+    <None Include="cards_bmp\S6.bmp" />
+    <None Include="cards_bmp\S7.bmp" />
+    <None Include="cards_bmp\S8.bmp" />
+    <None Include="cards_bmp\S9.bmp" />
+    <None Include="cards_bmp\Sa.bmp" />
+    <None Include="cards_bmp\Sj.bmp" />
+    <None Include="cards_bmp\Sk.bmp" />
+    <None Include="cards_bmp\Sq.bmp" />
+    <None Include="cards_bmp\St.bmp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
